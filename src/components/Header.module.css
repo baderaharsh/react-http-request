@@ -1,0 +1,26 @@
+.header-section {
+    width: 40%;
+    margin: 4rem auto;
+    padding: 1.5rem;
+    text-align: center;
+    z-index: 4;
+    box-shadow: rgba(0, 0, 0, 0.15) 5px 7px 10px;
+    border-radius: 14px;
+
+}
+
+.button {
+    cursor: pointer;
+    padding: 0.7rem 1.5rem;
+    background-color: purple;
+    color: white;
+    border: 1px solid purple;
+    /* box-shadow: rgba(105, 14, 90, 0.4) 5px 7px 10px; */
+    border-radius: 17px;
+}
+
+.button:hover, .button:active {
+    background-color: transparent;
+    color: purple;
+    /* border: 1px solid purple; */
+}
