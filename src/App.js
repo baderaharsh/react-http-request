@@ -10,11 +10,11 @@ function App() {
 
   const movieList = async (movie) => {
     setLoading(true);
-    const response = await fetch('https://swapi.dev/api/films/3');
+    const response = await fetch('https://swapi.dev/api/films/1');
     const data = await response.json();
-    const response1 = await fetch('https://swapi.dev/api/films/1');
+    const response1 = await fetch('https://swapi.dev/api/films/2');
     const data1 = await response1.json();
-    setMovies([{ title: data.title, opening_crowl: data.opening_crowl, release: data.release_date }, { title: data1.title, opening_crowl: data1.opening_crowl, release: data1.release_date }]);
+    setMovies([{ title: data.title, opening_crawl: data.opening_crawl, release: data.release_date }, { title: data1.title, opening_crawl: data1.opening_crawl, release: data1.release_date }]);
     setLoading(false)
 
   }
@@ -24,8 +24,8 @@ function App() {
       <header className="App-header">
         <Header getMovies={movieList} />
       </header>
-      {!loading && <MovieList movies={movies} />}
-      {loading && <p>Loading......</p>}
+      {!loading && movies.length > 0 && <MovieList movies={movies} />}
+      {loading && <p className='loading'>Loading......</p>}
     </div>
   );
 }
